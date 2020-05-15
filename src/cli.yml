@@ -1,0 +1,48 @@
+name: Todo
+version: "1.0"
+author: Ranjith Raj D <ranjithraj.d@gmail.com>
+about: Todo app
+settings: 
+    - ArgRequiredElseHelp
+args:
+    - db:
+        short: d
+        long: db
+        value_name: database name
+        takes_value: true
+        about: Sets a custom database name         
+        help: Sets a custom database name        
+    - set:
+        short: s
+        long: set   
+        about: Set currently passed flags are default                            
+        help: Set currently passed flags are default                       
+subcommands:
+    - init:
+        about: Initialize the db for first time setup
+        help: Initialize the db for first time setup
+    - test:
+        about: Test the application status
+        help: Test the application status
+    - add:
+        about: Insert todo into the application
+        help: Insert todo into the application        
+    - list:
+        about: Lists all todo without argument otherwise give argument
+        help : Lists all todo without argument otherwise give argument
+        args:
+            - input:
+                short: i
+                long: input
+                takes_value: true
+                help: Input integer to find specific todo
+    - remove:
+        about: Remove all todo without argument otherwise give argument
+        help: Remove all todo without argument otherwise give argument
+        args:
+            - input:
+                short: i
+                long: input
+                takes_value: true
+                help: Input integer to find specific todo                            
+                about: Input integer to find specific todo                            
